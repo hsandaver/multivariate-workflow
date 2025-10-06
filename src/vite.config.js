@@ -4,5 +4,5 @@ import react from '@vitejs/plugin-react'
 // IMPORTANT: replace REPO_NAME with your repo name
 export default defineConfig({
   plugins: [react()],
-  base: '/REPO_NAME/'
+  base: '/multivariate-workflow/'
 })
