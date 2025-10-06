@@ -21,9 +21,8 @@ jobs:
       - uses: actions/setup-node@v5
         with:
           node-version: 20
-          cache: 'npm'
-      # Using npm install because there is no lockfile when editing in the web UI
-      - run: npm install
+          # no cache: we have no lockfile; caching would complain
+      - run: npm install        # works without a lockfile
       - run: npm run build
       - uses: actions/upload-pages-artifact@v4
         with:
